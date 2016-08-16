@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<title>MAP</title>
+  <head>
+     <style>
+       #map {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps </h3>
+    <div id="map"></div>
+<!--      <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 8
+        });
+      }
+    </script> -->
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat:40.806558, lng: -73.944012},
+            zoom: 17
+});
+    var Schoolmarker = new google.maps.Marker({
+    position: {lat:40.806558, lng: -73.944012},
+    map: map,
+    title: 'MySchool'
+    	});
+
+  var AppleBeesmarker = new google.maps.Marker({
+    position: {lat: 40.806790, lng: -73.942413},
+    map: map,
+    title: 'AppleBees'
+
+  });
+   var CarolsDaughtermarker = new google.maps.Marker({
+    position: {lat:40.806616, lng: -73.943484},
+    map: map,
+    title: 'CarolsDaughter'
+      });
+    var MarcusGarveymarker = new google.maps.Marker({
+    position: {lat:40.805009, lng: -73.944863},
+    map: map,
+    title: 'MarcusGarvey'
+      });
+    var HarlemShakemarker = new google.maps.Marker({
+    position: {lat:40.807100, lng: -73.946350},
+    map: map,
+    title: 'HarlemShake'
+      });
+  var Wendysmarker = new google.maps.Marker({
+    position: {lat:40.805514, lng: -73.939425},
+    map: map,
+    title: 'Wendys'
+      });
+   var IHOPmarker = new google.maps.Marker({
+    position: {lat:40.804858, lng: -73.937260},
+     map: map,
+    title: 'IHOP'
+      });
+   var BlackInkmarker = new google.maps.Marker({
+    position: {lat:40.806940, lng: -73.944199},
+     map: map,
+    title: 'BlackInk'
+     });
+
+var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">BlackInk</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>BlackInkTattooShop</b>, also referred to as <b>MTV BlackInk</b>,  After closing the doors for several weeks to help Dutchess pursue her dream'+
+            'of opening her own shop in North Carolina, Ceaser has reopened Black Ink for what may be the most tumultuous season in franchise history.' +
+            'With Dutchess shop coming along, Ceaser is ready to build his empire and he needs the crew to get him to the top. '+
+            'Ted is promoted to manager and seizes power, immediately hiring a new artist named Melody.OShit works to reestablish his reputation as a master of'+
+            'ink, but when his addiction resurfaces, it puts a strain on his already fragile relationships, especially with Ceaser '+
+            'Donna fights for respect and a chance to tattoo but a shocking hook-up on an all-girls trip to Miami derails her ambitions and the tension between'+
+            ' her and the crew spirals out of control.'+
+            'The crew gets wind that Puma has opened a rival shop down the street in Harlem, which motivates Ceaser to pursue expansion. '+
+            'But when a violent and frightening episode occurs at Pumas shop, fingers are pointed and Puma struggles to hold onto his family,'+
+            ' as well as the two new tattoo artists he has hired to work in his shop.'+
+            '</p>'
+            '</div>'+
+            '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var BlackInkmarker = new google.maps.Marker({
+          position: {lat:40.806940, lng: -73.944199},
+          map: map,
+          title: 'TattooShop'
+        });
+        BlackInkmarker.addListener('click', function() {
+          infowindow.open(map, BlackInkmarker);
+        });
+
+
+
+
+}
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+
+
+   
+  </body>
+</html>
